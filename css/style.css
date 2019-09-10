@@ -1,0 +1,177 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #0b6d96;
+    background: url('../img/body_bck.jpg') no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    /*убираем маркеры списка*/
+    margin: 0;
+    /*убираем верхнее и нижнее поле, равное 1em*/
+    padding-left: 0;
+    /*убираем левый отступ, равный 40px*/
+    vertical-align: middle;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    /*убираем подчеркивание текста ссылок*/
+}
+
+.container {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding: 0 28px;
+}
+
+/*шапка*/
+
+header {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+nav {
+    min-height: 60px;
+}
+
+.nav-menu {
+    display: inline-block;
+}
+
+.nav-menu li {
+    box-sizing: content-box;
+    display: inline-block;
+    margin-right: 25px;
+    padding: 10px 5px;
+    letter-spacing: 1.5px;
+}
+
+.nav-menu li {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    border: 3px solid #ffffff;
+    background-color: #0a749c;
+}
+
+.header_content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #658a99;
+    padding-top: 19px;
+}
+
+.logo {}
+
+.sublogo {
+    width: 150px;
+    margin-right: 72px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    padding: 18px 42px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: #63a574;
+}
+
+.counter {
+    width: 124px;
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contacts {
+    width: 196px;
+}
+
+/*основная часть */
+main {
+    background-color: #fff;
+}
+
+.banner {
+    width: 1090px;
+    height: 340px;
+    background: url('../img/banner_back.png') no-repeat right center;
+    margin-bottom: 30px;
+}
+
+.banner_lead {
+    width: 270px;
+    min-height: 310px;
+    padding-top: 30px;
+    padding-left: 31px;
+
+    background-color: #0b6d96;
+    background: url('../img/bannerlead_bck.jpg') no-repeat center center;
+    background-size: contain;
+    color: #fff;
+}
+
+.banner_lead h2 {
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+    font-family: "Open Sans Condensed";
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+.banner_lead p {
+    display: inline-block;
+    width: 245px;
+    margin: 0;
+    margin-bottom: 18px;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.banner_lead .btn {
+    padding: 10px 18px;
+    color: #0b6d96;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+aside {
+    width: 300px;
+}
