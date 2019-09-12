@@ -5,8 +5,17 @@ body {
     background-color: #0b6d96;
     background: url('../img/body_bck.jpg') no-repeat;
     background-size: cover;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+b {
+    margin: 0;
 }
 
 ul {
@@ -87,6 +96,7 @@ nav {
     font-weight: 600;
     line-height: 15px;
     text-transform: uppercase;
+
 }
 
 .btn {
@@ -118,6 +128,8 @@ nav {
 main {
     background-color: #fff;
 }
+
+/*банер, возможно слайдер*/
 
 .banner {
     width: 1090px;
@@ -151,13 +163,14 @@ main {
 
 .banner_lead p {
     display: inline-block;
-    width: 245px;
+    width: 240px;
     margin: 0;
     margin-bottom: 18px;
     font-family: "Open Sans";
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
+    text-align: left;
 }
 
 .banner_lead .btn {
@@ -172,6 +185,274 @@ main {
     background-color: #ffffff;
 }
 
+.grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*боковая панель*/
+
 aside {
     width: 300px;
+
+}
+
+.catalog {
+    background-color: #9db5bf;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.catalog h3 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #f58e50;
+    border-bottom: 1px solid #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 28px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.catalog li {
+    padding: 0;
+    margin: 0;
+    padding-left: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+}
+
+.catalog li:hover {
+    background-image: linear-gradient(to top, #8aa3ad 0%, #c6d6dd 100%);
+}
+
+.wiki {
+    position: relative;
+    background-color: #637982;
+    margin-bottom: 30px;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.wiki a {
+    display: block;
+    width: 140px;
+    padding: 36px 54px 36px 106px;
+}
+
+.wiki b {
+    font-size: 18px;
+}
+
+.wiki a::before {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 42px;
+    background: transparent url('../img/wiki.png') no-repeat center center;
+    top: 34px;
+    left: 30px;
+}
+
+.bestprice {
+    position: relative;
+    border: 1px solid #9db5bf;
+    padding-top: 25px;
+    margin-bottom: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.bestprice h3 {
+    display: block;
+    width: 230px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: #f58e50;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.bestprice p {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 29px;
+    color: #658a99;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.bestprice img {
+    margin-bottom: 48px;
+}
+
+.hot {
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    bottom: 35px;
+    left: 23px;
+    border-radius: 50%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: #f58e50;
+    color: #ffffff;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 112px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.map {
+    width: 298px;
+    height: 277px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border: 1px solid #9db5bf;
+    margin-bottom: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    background: url('../img/map.png') no-repeat center bottom;
+}
+
+.map h3 {
+    margin: 0;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    background-color: #9db5bf;
+}
+
+.map::before {
+    content: "";
+    position: absolute;
+    top: 123px;
+    left: 120px;
+    width: 59px;
+    height: 67px;
+    background: transparent url('../img/logo_white.png') no-repeat center center;
+    background-size: cover;
+}
+
+/*статья */
+
+.content {
+    width: 752px;
+    margin: 0;
+    padding: 0;
+    color: #658a99;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 11px;
+}
+
+
+.content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 14px;
+}
+
+.illustration {
+    float: left;
+    width: 300px;
+    min-height: 280px;
+    margin: 7px 22px 10px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.illustration img {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.illustration span {
+    display: block;
+    width: 290px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 15px;
+    margin-bottom: 28px;
+
+}
+
+/*таблица*/
+table {
+    width: 100%;
+    color: #658a99;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+}
+
+th {
+    padding-bottom: 16px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    border-bottom: 2px solid #0b6d96;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #9db5bf;
+}
+
+.col1 {
+    width: 49%;
+    text-align: left;
+    padding-left: 1px;
 }
