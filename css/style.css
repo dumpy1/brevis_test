@@ -20,18 +20,14 @@ b {
 
 ul {
     list-style: none;
-    /*убираем маркеры списка*/
     margin: 0;
-    /*убираем верхнее и нижнее поле, равное 1em*/
     padding-left: 0;
-    /*убираем левый отступ, равный 40px*/
     vertical-align: middle;
 }
 
 a {
     color: #ffffff;
     text-decoration: none;
-    /*убираем подчеркивание текста ссылок*/
 }
 
 .container {
@@ -55,7 +51,7 @@ header {
 }
 
 nav {
-    min-height: 60px;
+    min-height: 40px;
 }
 
 .nav-menu {
@@ -68,11 +64,12 @@ nav {
     margin-right: 25px;
     padding: 10px 5px;
     letter-spacing: 1.5px;
+    border: 3px solid transparent;
 }
 
-.nav-menu li {
+.nav-menu li:hover {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-    border: 3px solid #ffffff;
+    border: 3px solid #fff;
     background-color: #0a749c;
 }
 
@@ -86,17 +83,29 @@ nav {
     padding-top: 19px;
 }
 
-.logo {}
+
 
 .sublogo {
+    position: relative;
     width: 150px;
+    margin-left: 100px;
     margin-right: 72px;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 12px;
     font-weight: 600;
     line-height: 15px;
     text-transform: uppercase;
+    color: #7fa2b0;
+}
 
+.sublogo::before {
+    position: absolute;
+    content: "";
+    width: 96px;
+    height: 108px;
+    background: transparent url('../img/logo.png') no-repeat center center;
+    top: -25px;
+    left: -100px;
 }
 
 .btn {
@@ -112,13 +121,39 @@ nav {
 }
 
 .counter {
+    display: block;
     width: 124px;
+    height: 95px;
     text-align: center;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
+    background: transparent url('../img/bigbrackets.png') no-repeat center bottom;
 }
+
+.counter b {
+    position: relative;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #3583b5;
+}
+
+.counter b::before {
+    position: absolute;
+    content: "";
+    background: transparent url('../img/bigbrackets.png') no-repeat center center;
+
+
+}
+
+.counter span {
+    color: #3583b5;
+}
+
+
+
 
 .contacts {
     width: 196px;
@@ -455,4 +490,187 @@ td {
     width: 49%;
     text-align: left;
     padding-left: 1px;
+}
+
+/* слайдеры*/
+
+.offer {
+    margin-bottom: 60px;
+}
+
+.offer h3 {
+    text-align: center;
+    background-color: #f58e50;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+}
+
+
+
+.offer_slider {
+    padding: 0 70px;
+}
+
+.offer_slider_item {
+    width: 160px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #658a99;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.offer_slider_item:last-child {
+    margin-right: 0;
+}
+
+.offer_slider_item p {
+    display: block;
+    width: 135px;
+    margin: 0 auto;
+}
+
+
+
+..offer_slider_item img {
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.partners {
+    padding-bottom: 100px;
+}
+
+.partners_slider {
+    padding: 0 70px;
+
+}
+
+.partners h3 {
+    text-align: center;
+    background-color: #9db5bf;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+}
+
+.partners_slider_item {
+
+    margin-right: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.partners_slider_item:last-child {
+    margin-right: 0;
+}
+
+/*футер*/
+/*футер меню*/
+.footer_nav {
+    margin-bottom: 30px;
+}
+
+.footer_nav_menu {
+    background-color: #9db5bf;
+
+}
+
+.footer_nav_menu {
+    text-align: center;
+
+}
+
+.footer_nav_menu li {
+    padding: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+/*футер основная часть*/
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 100px;
+}
+
+footer .sublogo {
+    margin-left: 92px;
+}
+
+footer .sublogo::before {
+    position: absolute;
+    content: "";
+    width: 81px;
+    height: 92px;
+    background: transparent url('../img/logo_footer.png') no-repeat center center;
+    top: -22px;
+    left: -90px;
+}
+
+footer .contacts {
+    margin-right: 350px;
+}
+
+.phone {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.4px;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.address,
+.mail {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.address b,
+.mail b {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.12px;
+}
+
+
+.copyright {
+    position: relative;
+    width: 200px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.copyright a {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.copyright::before {
+    content: "";
+    position: absolute;
+    width: 41px;
+    height: 47px;
+    background: transparent url('../img/brevis.png') no-repeat center center;
+    left: -45px;
+    top: -5px;
 }
