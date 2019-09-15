@@ -5,8 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> FPUMP ремонт и продажа насосов</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700%7COpen+Sans:300,300i,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&COpen+Sans:300,300i,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -17,7 +26,13 @@
                 <li><a href="#">О компании</a></li>
                 <li><a href="#">Насосы</a></li>
                 <li><a href="#">Продажа насосов</a></li>
-                <li><a href="#">Инжиниринг</a></li>
+                <li class="dropdown"><a href="#">Инжиниринг</a>
+                    <ul class="submenu">
+                        <li><a href="#">Ремонт насосов</a></li>
+                        <li><a href="#">Проектирование насосов</a></li>
+                        <li><a href="#">Калибровка насосов</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Контакты</a></li>
 
             </ul>
@@ -30,14 +45,17 @@
             </div>
 
             <div class="counter">
-                На данный момент мы обработали
-                <b>785</b> <br>
-                <span>заявок</span>
+                <div class="counter_top">На данный момент мы обработали</div>
+                <div class="counter_bottom"><b>785</b> <br>
+                    <span>заявок</span></div>
+
             </div>
             <div class="counter">
-                Всего починили
-                <b>695</b><br>
-                <span>насосов</span>
+                <div class="counter_top">Всего<br> починили</div>
+                <div class="counter_bottom"><b>695</b><br>
+                    <span>насосов</span></div>
+
+
             </div>
 
             <div class="contacts">
@@ -167,11 +185,14 @@
                             <p>Дренажный насос Джилекс Дренажник 110/6</p>
                         </div>
                     </div>
+                    <div class="prev"></div>
+                    <div class="next"></div>
                 </div>
 
 
                 <div class="partners">
                     <h3>наши партнеры</h3>
+
                     <div class="partners_slider">
                         <div class="partners_slider_item">
                             <img src="./img/partner1.png" alt="">
@@ -189,7 +210,10 @@
                             <img src="./img/partner5.png" alt="">
                         </div>
                     </div>
+                    <div class="prev"></div>
+                    <div class="next"></div>
                 </div>
+
 
             </div>
         </div>
@@ -232,5 +256,30 @@
     <div class="backtotop">
         <span>наверх</span>
     </div>
-    <div>заказать ремонт</div>
+    <div class="repairorder">заказать ремонт</div>
+
+    <script>
+        $('.offer_slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next')
+
+        });
+    </script>
+    <script>
+        $('.partners_slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next')
+
+        });
+    </script>
 </body></html>

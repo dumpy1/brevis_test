@@ -25,6 +25,8 @@ ul {
     vertical-align: middle;
 }
 
+
+
 a {
     color: #ffffff;
     text-decoration: none;
@@ -56,14 +58,19 @@ nav {
 
 .nav-menu {
     display: inline-block;
+    font-size: 14px;
 }
+
+
+
+
 
 .nav-menu li {
     box-sizing: content-box;
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 20px;
     padding: 10px 5px;
-    letter-spacing: 1.5px;
+    letter-spacing: normal;
     border: 3px solid transparent;
 }
 
@@ -73,6 +80,61 @@ nav {
     background-color: #0a749c;
 }
 
+.dropdown {
+    position: relative;
+    z-index: 40;
+}
+
+.dropdown:hover {
+    border-bottom: 3px solid transparent;
+}
+
+.submenu {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -3px;
+    width: 260px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    border: 3px solid #ffffff;
+    background-color: #0a749c;
+    z-index: -100;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    padding-left: 36px;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    position: relative;
+    display: block;
+    width: 175px;
+}
+
+.submenu li::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    left: -15px;
+    top: 18px;
+}
+
+.submenu li:hover {
+    border: 3px solid transparent;
+}
+
+
+
 .header_content {
     background-color: #fff;
     display: flex;
@@ -81,6 +143,7 @@ nav {
     justify-content: space-between;
     color: #658a99;
     padding-top: 19px;
+    padding-bottom: 25px;
 }
 
 
@@ -115,7 +178,7 @@ nav {
     line-height: 20px;
     letter-spacing: 1.1px;
     text-transform: uppercase;
-    padding: 18px 42px;
+    padding: 15px 26px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     background-color: #63a574;
 }
@@ -130,6 +193,10 @@ nav {
     font-weight: 600;
     text-transform: uppercase;
     background: transparent url('../img/bigbrackets.png') no-repeat center bottom;
+}
+
+.counter_top {
+    margin-bottom: 15px;
 }
 
 .counter b {
@@ -157,7 +224,36 @@ nav {
 
 .contacts {
     width: 196px;
+    text-transform: none;
 }
+
+.header_content .contacts {
+    padding-top: 37px;
+}
+
+.phone {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.4px;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.address,
+.mail {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.address b,
+.mail b {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.12px;
+}
+
 
 /*основная часть */
 main {
@@ -174,22 +270,24 @@ main {
 }
 
 .banner_lead {
-    width: 270px;
-    min-height: 310px;
-    padding-top: 30px;
-    padding-left: 31px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 340px;
+    padding-top: 22px;
+    padding-left: 30px;
 
     background-color: #0b6d96;
     background: url('../img/bannerlead_bck.jpg') no-repeat center center;
-    background-size: contain;
+    background-size: auto;
     color: #fff;
 }
 
 .banner_lead h2 {
+    display: block;
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     padding: 0;
-    font-family: "Open Sans Condensed";
+    font-family: "Open Sans Condensed", sans-serif;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: .7px;
@@ -197,18 +295,19 @@ main {
 }
 
 .banner_lead p {
-    display: inline-block;
+    display: block;
     width: 240px;
     margin: 0;
     margin-bottom: 18px;
     font-family: "Open Sans";
     font-size: 14px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 20px;
     text-align: left;
 }
 
 .banner_lead .btn {
+    margin: 0;
     padding: 10px 18px;
     color: #0b6d96;
     font-family: "Open Sans";
@@ -496,6 +595,7 @@ td {
 
 .offer {
     margin-bottom: 60px;
+    position: relative;
 }
 
 .offer h3 {
@@ -512,6 +612,7 @@ td {
 
 
 .offer_slider {
+
     padding: 0 70px;
 }
 
@@ -536,6 +637,32 @@ td {
     margin: 0 auto;
 }
 
+/*сука слик слайдер*/
+/*стилизуем кнопки*/
+.next,
+.prev {
+    position: absolute;
+    width: 26px;
+    height: 41px;
+    left: 25px;
+    top: 180px;
+    background: transparent url('../img/slider_nav.png') no-repeat;
+}
+
+.prev {
+    transform: rotate(180deg);
+    left: 1036px;
+    top: 185px;
+}
+
+.partners .next {
+    top: 150px;
+}
+
+.partners .prev {
+    top: 155px;
+}
+
 
 
 ..offer_slider_item img {
@@ -545,6 +672,7 @@ td {
 
 .partners {
     padding-bottom: 100px;
+    position: relative;
 }
 
 .partners_slider {
@@ -628,28 +756,6 @@ footer .contacts {
     margin-right: 350px;
 }
 
-.phone {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 300;
-    letter-spacing: -0.4px;
-    font-size: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-}
-
-.address,
-.mail {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-}
-
-.address b,
-.mail b {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: -0.12px;
-}
 
 
 .copyright {
@@ -673,4 +779,60 @@ footer .contacts {
     background: transparent url('../img/brevis.png') no-repeat center center;
     left: -45px;
     top: -5px;
+}
+
+.repairorder {
+    display: block;
+    position: absolute;
+    top: 228px;
+    right: -77px;
+
+    box-sizing: border-box;
+    width: 220px;
+    padding: 20px;
+    background-color: #f58e50;
+    color: #ffffff;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    transform: rotate(270deg)
+}
+
+.backtotop {
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 132px;
+    font-family: "Open Sans  Condensed ", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding: 25px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    right: -20px;
+    top: 390px;
+}
+
+.backtotop span {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+
+.backtotop span::before {
+    content: "";
+    width: 21px;
+    height: 13px;
+    position: absolute;
+    background: transparent url('../img/up.png') no-repeat center center;
+    left: -10px;
+    top: 2px;
+
 }
